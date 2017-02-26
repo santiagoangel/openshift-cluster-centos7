@@ -1,6 +1,10 @@
 #!/bin/sh
 
 #start on a fresh Centos 7 install: http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso
+#then:
+#wget https://raw.githubusercontent.com/santiagoangel/openshift-cluster-centos7/master/install.sh
+#sh install.sh
+
 
 #install packages
 yum install -y epel-release
