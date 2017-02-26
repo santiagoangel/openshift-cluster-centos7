@@ -12,6 +12,17 @@ cd ~
 git clone https://github.com/openshift/openshift-ansible
 git clone https://github.com/santiagoangel/openshift-cluster-centos7
 
-apply hosts
+#apply hosts
+
+rm -Rf /etc/hosts
+cp openshift-cluster-centos7/hosts /etc/hosts
+
+#ssh keys
+ssh-keygen -t rsa
+ssh-copy-id root@cloud.successfulsoftware.io
+
+#ansible run
+
+ansible-playbook -i ./openshift-cluster-centos7/inventory-registry-all.erb ./openshift-ansible/playbooks/byo/config.yml -vvv
 
 
