@@ -2,13 +2,12 @@
 
 #start on a fresh Centos 7 install: http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso
 #then:
-#wget https://raw.githubusercontent.com/santiagoangel/openshift-cluster-centos7/master/install.sh
-#sh install.sh
+#yum install -y wget; wget https://raw.githubusercontent.com/santiagoangel/openshift-cluster-centos7/master/install.sh; sh install.sh
 
 
 #install packages
 yum install -y epel-release
-yum install -y docker wget git ansible
+yum install -y docker git ansible
 yum install -y python-cryptography pyOpenSSL.x86_64
 
 #clone git projects
