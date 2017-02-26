@@ -34,5 +34,8 @@ ssh-copy-id root@cloud.successfulsoftware.io
 
 ansible-playbook -i ./openshift-cluster-centos7/inventory-registry-all.erb ./openshift-ansible/playbooks/byo/config.yml -vvv
 
+#then set a new user: e.g. developer
+htpasswd /etc/origin/master/htpasswd developer
 
+#open https://cloud.successfulsoftware.io:8443/console/
 
